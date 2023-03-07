@@ -1,0 +1,105 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+.container .list {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  background-color: #eee;
+  padding: 15px 25px;
+}
+.container .list li {
+  list-style: none;
+  font-weight: 600;
+}
+
+.container .list_product .product_one {
+  text-align: center;
+  width: 6rem;
+}
+.container .list_product .image_1 {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 10px;
+}
+.container .list_product .paragraph {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+.container .list_product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.container .list_product .counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .list_product .btn_plus,
+.container .list_product .btn_minus {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #f6f7fb;
+  border-radius: 50%;
+  background-color: #f6f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: ‘Open Sans’;
+  font-weight: 900;
+  color: #202020;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .list_product .btn_plus:hover,
+.container .list_product .btn_minus:hover {
+  border-color: #3577f0;
+}
+.container .list_product .count {
+  font-size: 20px;
+  font-family: ‘Open Sans’;
+  font-weight: 900;
+  color: #202020;
+  padding: 5px;
+}
+.container .list_product .cancel {
+  position: absolute;
+  right: -5rem;
+  background-color: #f6f7fb;
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #f6f7fb;
+  transition: 0.3s;
+}
+.container .list_product .cancel:hover {
+  border-color: #3577f0;
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .container .list_product .cancel {
+    left: 0;
+  }
+  .container .list_product {
+    padding-left: 25px;
+  }
+}
