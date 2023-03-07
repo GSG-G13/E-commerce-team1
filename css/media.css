@@ -1,0 +1,13 @@
+@media (max-width:600px) {
+    nav {
+        visibility: hidden;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-picture {
+        order: -1;
+    }
+}
