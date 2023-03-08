@@ -45,17 +45,21 @@
   .products-actions {
     flex-direction: column;
   }
+
   .products-actions .input-search {
     width: 100%;
   }
+
   .products-actions .add-product {
     width: 50%;
     font-size: 12px;
   }
+
   .products {
     display: flex;
     flex-direction: column;
   }
+
   .product-div {
     width: 280px;
     margin: auto;

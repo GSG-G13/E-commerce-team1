@@ -28,6 +28,7 @@ header nav a {
   display: flex;
   text-decoration: none;
   padding: 12px;
+  font-size: 18px;
 }
 header nav a:hover {
   border-bottom: 2px solid black;
