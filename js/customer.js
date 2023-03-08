@@ -49,7 +49,9 @@ const products = [
   },
 ];
 
-let productsFromStorge = JSON.parse(localStorage.getItem("product"));
+let productsFromStorge = Array.from(
+  JSON.parse(localStorage.getItem("product"))
+);
 // filteredProducts = []
 let filteredProducts = [...products, ...productsFromStorge];
 
