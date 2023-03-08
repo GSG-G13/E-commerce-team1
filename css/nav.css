@@ -2,32 +2,26 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 28px;
-  /* background-color: yellowgreen; */
+  align-items: center;
+  padding: 28px 150px;
 }
-
 header .logo {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 }
-
-header .logo span {
-  font-weight: 900;
-  font-size: 24px;
+header .logo img {
+  width: 100%;
 }
-
 header nav {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   align-self: center;
   z-index: 2;
 }
-
 header nav a {
   color: black;
   line-height: 29px;
@@ -35,7 +29,13 @@ header nav a {
   text-decoration: none;
   padding: 12px;
 }
-
 header nav a:hover {
-  border-bottom: 3px solid black;
+  border-bottom: 2px solid black;
+}
+header a{
+  z-index: 1000;
+}
+header svg {
+  width: 30px;
+  cursor: pointer;
 }
