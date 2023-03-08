@@ -8,4 +8,8 @@ function filterByCategory(array, inputValue) {
   );
   return filteredArr;
 }
-module.exports = { deleteElements, filterByCategory };
+function addProductElement(array, product) {
+  array.push(product);
+  return array;
+}
+module.exports = { deleteElements, filterByCategory, addProductElement };
