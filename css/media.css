@@ -3,31 +3,33 @@
     visibility: hidden;
   }
 
-  .hero {
-    flex-direction: column;
+  .hero-picture {
+    display: none;
   }
 
-  .hero-picture {
-    order: -1;
-  }
   .container {
     /* margin-top: 50px; */
     padding: 50px 20px 30px 20px;
   }
+
   .products-actions {
     flex-direction: column;
   }
+
   .products-actions .input-search {
     width: 100%;
   }
+
   .products-actions .add-product {
     width: 50%;
     font-size: 12px;
   }
+
   .products {
     display: flex;
     flex-direction: column;
   }
+
   .product-div {
     width: 280px;
     margin: auto;
