@@ -45,10 +45,20 @@
 //     },
 //   ];
 
-const { deleteElements, filterByCategory } = require("../js/helpers");
+const {
+  deleteElements,
+  filterByCategory,
+  addProductElement,
+} = require("../js/helpers");
 test("tests", () => {
   let actual = deleteElements([{ id: 1 }, { id: 2 }, { id: 3 }], 1);
   let expected = [{ id: 2 }, { id: 3 }];
+  expect(actual).toStrictEqual(expected);
+});
+
+test("tests", () => {
+  let actual = addProductElement([1, 2, 3], 4);
+  let expected = [1, 2, 3, 4];
   expect(actual).toStrictEqual(expected);
 });
 

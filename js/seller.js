@@ -41,7 +41,8 @@ function createProduct() {
   };
   products.push(product);
   console.log(products, "jjj");
-  localStorage.setItem("product", JSON.stringify(products));
+  const newArray = addProductElement(products, product);
+  localStorage.setItem("product", JSON.stringify(newArray));
   createElements(products);
 }
 function createElements(products) {
