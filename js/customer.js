@@ -3,7 +3,7 @@ const products = [
     name: "MAC",
     category: "Laptops",
     price: "30",
-    image: "white-tshirt.jpg",
+    image: "../imgs/mac.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
@@ -11,7 +11,7 @@ const products = [
     name: "HP",
     category: "Laptops",
     price: "30",
-    image: "white-tshirt.jpg",
+    image: "../imgs/HP.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
@@ -19,7 +19,7 @@ const products = [
     name: "iPhonex",
     category: "Mobiles",
     price: "30",
-    image: "white-tshirt.jpg",
+    image: "../imgs/iphone.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
@@ -27,7 +27,7 @@ const products = [
     name: "Nokia",
     category: "Mobiles",
     price: "30",
-    image: "white-tshirt.jpg",
+    image: "../imgs/nokia.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
@@ -35,7 +35,7 @@ const products = [
     name: "Wireless-hedphones",
     category: "Headphones",
     price: "30",
-    image: "white-tshirt.jpg",
+    image: "../imgs/headphones.jpeg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
@@ -43,7 +43,7 @@ const products = [
     name: "headphone",
     category: "Headphones",
     price: "30",
-    image: "white-tshirt.jpg",
+    image: "../imgs/headphones.jpeg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
