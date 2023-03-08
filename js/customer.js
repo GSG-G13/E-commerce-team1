@@ -49,7 +49,11 @@ const products = [
   },
 ];
 
-let filteredProducts = [...products];
+let productsFromStorge = JSON.parse(localStorage.getItem("product"));
+// filteredProducts = []
+let filteredProducts = [...products, ...productsFromStorge];
+
+console.log(filteredProducts);
 
 //get elemnts from the dom
 const productsContainer = document.querySelector(".products");
@@ -59,8 +63,8 @@ const list = document.getElementById("list");
 
 list.addEventListener("change", (e) => {
   filteredProducts =
-    list.value === "all"
-      ? [...products]
+    list.value === "All"
+      ? filteredProducts
       : products.filter((p) => p.category === list.value);
 
   console.log(list.value, filteredProducts);
@@ -73,13 +77,13 @@ searchBar.addEventListener("input", (e) => {
     ? filteredProducts.filter((p) =>
         p.name.toLowerCase().includes(e.target.value.toLowerCase())
       )
-    : [...products];
+    : filteredProducts;
 
   updateDom();
 });
 
 function createProductElement(product) {
-  return `
+  let ele = `
   <div class="product-div">
   <div class="product-details">
     <img src="${product.image}" alt="" class="product-img" />
@@ -95,11 +99,14 @@ function createProductElement(product) {
   </div>
 </div>
   `;
+
+  let addToCart = document.getElementsByClassName("add-to-cart");
+
+  return ele;
 }
 
 function updateDom() {
   const plainElements = filteredProducts.map((p) => createProductElement(p));
-
   productsContainer.innerHTML = plainElements;
 }
 
