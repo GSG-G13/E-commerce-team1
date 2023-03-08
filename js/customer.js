@@ -101,7 +101,7 @@ function createProductElement(product) {
   `;
 
   let addToCart = document.getElementsByClassName("add-to-cart");
-
+  console.log(addToCart.id);
   return ele;
 }
 
@@ -109,5 +109,5 @@ function updateDom() {
   const plainElements = filteredProducts.map((p) => createProductElement(p));
   productsContainer.innerHTML = plainElements;
 }
-
+function addToCart() {}
 updateDom();
