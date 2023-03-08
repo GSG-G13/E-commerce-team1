@@ -74,9 +74,10 @@ list.addEventListener("change", (e) => {
 
 searchBar.addEventListener("input", (e) => {
   filteredProducts = e.target.value
-    ? filteredProducts.filter((p) =>
-        p.name.toLowerCase().includes(e.target.value.toLowerCase())
-      )
+    ? // ? filteredProducts.filter((p) =>
+      //     p.name.toLowerCase().includes(e.target.value.toLowerCase())
+      // )
+      filterByCategory(filteredProducts, e.target.value.toLowerCase())
     : filteredProducts;
 
   updateDom();

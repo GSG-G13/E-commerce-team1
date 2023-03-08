@@ -124,7 +124,7 @@ function createElements(products) {
 }
 function deleteProduct(id) {
   let update = JSON.parse(window.localStorage.getItem("product"));
-  let updatedProducts = filterElements(update, id);
+  let updatedProducts = deleteElements(update, id);
   window.localStorage.setItem("product", JSON.stringify(updatedProducts));
   products = updatedProducts;
   createElements(products);
