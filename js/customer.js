@@ -48,8 +48,9 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
 ];
-
-let productsFromStorge = JSON.parse(localStorage.getItem("product"));
+let productsFromStorge = [];
+if (localStorage.getItem("product"))
+  productsFromStorge = JSON.parse(localStorage.getItem("product"));
 // filteredProducts = []
 let filteredProducts = [...products, ...productsFromStorge];
 
