@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
@@ -13,184 +14,28 @@
       rel="stylesheet"
     />
     <link rel="icon" href="../imgs/app-tap-icon.svg" />
-    <title>e-commerce App</title>
+    <title>Cart</title>
   </head>
   <body>
     <header>
       <!-- <div class="circle"></div> -->
       <div class="logo">
-        <svg
-          width="90"
-          height="56"
-          viewBox="0 0 90 56"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M89.162 0.278412L60.5911 45.7361L59.0658 48.1617L57.273 51.0213L57.0968 51.0413L48.4176 38.6111L49.9681 36.1299L61.8608 17.1858L89.162 0.278412Z"
-            fill="url(#paint0_linear_3_39)"
-          />
-          <g style="mix-blend-mode: multiply" opacity="0.16">
-            <g style="mix-blend-mode: multiply" opacity="0.16">
-              <path
-                d="M60.5911 45.7361L57.273 51.0206L57.0968 51.0406L48.4176 38.6111L49.9673 36.1299C52.6656 38.5518 57.2085 42.6587 60.5911 45.7361Z"
-                fill="black"
-              />
-            </g>
-          </g>
-          <path
-            d="M42.0273 29.4663L57.0965 51.0375L41.2304 52.9899L33.8437 42.4157L42.0273 29.4663Z"
-            fill="url(#paint1_linear_3_39)"
-          />
-          <g style="mix-blend-mode: screen" opacity="0.3">
-            <g style="mix-blend-mode: screen" opacity="0.3">
-              <path
-                d="M89.1612 0.278412L60.5904 45.7361L59.0651 48.1617C58.42 49.1245 57.7577 50.0874 57.0984 51.0406C58.3429 48.8779 59.6158 46.7271 60.8917 44.577C62.1535 42.4232 63.4366 40.28 64.7408 38.1475C67.3447 33.8806 69.9053 29.5819 72.5555 25.3343C75.1774 21.0771 77.8497 16.8481 80.5048 12.6094C82.6902 9.17871 84.8779 5.74706 87.0687 2.31443C85.6048 3.21061 84.1431 4.09198 82.6595 4.9652L75.758 9.07947C73.4609 10.462 71.1534 11.8221 68.8354 13.1597C66.5195 14.5143 64.2036 15.8689 61.8633 17.1888L89.1612 0.278412Z"
-                fill="white"
-              />
-            </g>
-          </g>
-          <g style="mix-blend-mode: screen" opacity="0.3">
-            <g style="mix-blend-mode: screen" opacity="0.3">
-              <path
-                d="M42.0272 29.4663L55.8795 49.2963C55.9959 49.4926 56.1068 49.6821 56.2162 49.8829C55.5436 49.0867 54.9009 48.272 54.2456 47.4551C53.6029 46.6404 52.9397 45.8257 52.319 44.9999C51.6787 44.1741 51.051 43.3504 50.4248 42.5149C49.8112 41.6825 49.1834 40.8589 48.5722 40.0145C47.3482 38.3358 46.142 36.6481 44.9536 34.9515C43.9592 33.5591 42.9979 32.1371 42.0335 30.7299C40.8299 32.5568 39.6051 34.3754 38.359 36.1855C37.6258 37.2365 36.9045 38.2896 36.1367 39.3213C35.3815 40.3582 34.6358 41.404 33.8459 42.4194L42.0272 29.4663Z"
-                fill="white"
-              />
-            </g>
-          </g>
-          <g style="mix-blend-mode: screen" opacity="0.15">
-            <g style="mix-blend-mode: screen" opacity="0.15">
-              <path
-                d="M63.3429 18.1405L82.5015 6.64944L60.7415 41.6188L63.3429 18.1405Z"
-                fill="white"
-              />
-            </g>
-          </g>
-          <g style="mix-blend-mode: screen" opacity="0.15">
-            <g style="mix-blend-mode: screen" opacity="0.15">
-              <path
-                d="M35.3233 42.4491L42.1122 33.2755L53.9026 49.2082L35.3233 42.4491Z"
-                fill="white"
-              />
-            </g>
-          </g>
-          <path
-            d="M0.981506 55.0681L29.5521 9.6134L31.0775 7.18782L32.8703 4.3282L33.0465 4.3082L41.7273 16.7347L40.1768 19.2151L28.2785 38.157L0.981506 55.0681Z"
-            fill="url(#paint2_linear_3_39)"
-          />
-          <g style="mix-blend-mode: multiply" opacity="0.16">
-            <g style="mix-blend-mode: multiply" opacity="0.16">
-              <path
-                d="M29.5493 9.61051L32.8674 4.3253L33.0437 4.3053L41.7244 16.7318L40.1739 19.2129C37.4773 16.7873 32.9319 12.6842 29.5493 9.61051Z"
-                fill="black"
-              />
-            </g>
-          </g>
-          <path
-            d="M48.1124 25.8765L33.0432 4.30531L48.9085 2.35297L56.2953 12.9271L48.1124 25.8765Z"
-            fill="url(#paint3_linear_3_39)"
-          />
-          <g style="mix-blend-mode: multiply" opacity="0.16">
-            <g style="mix-blend-mode: multiply" opacity="0.16">
-              <path
-                d="M0.981506 55.0682L29.5521 9.61427L31.0775 7.1887C31.7225 6.22586 32.3841 5.26303 33.0441 4.30908C31.7988 6.47176 30.5268 8.62255 29.2509 10.7734C27.9891 12.9267 26.706 15.0696 25.4017 17.2022C22.7979 21.469 20.2373 25.7677 17.5863 30.0153C14.9651 34.2725 12.2929 38.5016 9.6371 42.7402C7.45177 46.1709 5.26408 49.6026 3.07402 53.0352C4.53799 52.139 5.99959 51.2576 7.48323 50.3852L14.3846 46.2701C16.6811 44.8877 18.9887 43.5276 21.3072 42.19C23.6231 40.8353 25.939 39.4807 28.2793 38.1609L0.981506 55.0682Z"
-                fill="black"
-              />
-            </g>
-          </g>
-          <g style="mix-blend-mode: multiply" opacity="0.3">
-            <g style="mix-blend-mode: multiply" opacity="0.3">
-              <path
-                d="M48.1126 25.8766L34.2572 6.04661C34.1416 5.85034 34.0299 5.66074 33.9213 5.46002C34.5939 6.25621 35.2366 7.07093 35.888 7.88786C36.5307 8.70256 37.193 9.51727 37.8145 10.3431C38.4548 11.1689 39.0825 11.9925 39.7087 12.8272C40.3215 13.6604 40.9501 14.484 41.5606 15.3284C42.7856 17.0072 43.9918 18.6948 45.1792 20.3914C46.1735 21.7838 47.1348 23.2058 48.0993 24.613C49.3029 22.7861 50.5274 20.9676 51.7729 19.1575C52.5068 18.1065 53.2283 17.0533 53.9953 16.0216C54.7623 14.9899 55.497 13.9389 56.286 12.9235L48.1126 25.8766Z"
-                fill="black"
-              />
-            </g>
-          </g>
-          <g style="mix-blend-mode: screen" opacity="0.3">
-            <g style="mix-blend-mode: screen" opacity="0.3">
-              <path
-                d="M26.7964 37.2024L7.63892 48.6935L29.3979 13.7241C29.3979 13.7241 29.3877 14.1632 26.7964 37.2024Z"
-                fill="white"
-              />
-            </g>
-          </g>
-          <g style="mix-blend-mode: screen" opacity="0.2">
-            <g style="mix-blend-mode: screen" opacity="0.2">
-              <path
-                d="M54.8153 12.8938L48.0233 22.0674L36.2328 6.13464L54.8153 12.8938Z"
-                fill="white"
-              />
-            </g>
-          </g>
-          <defs>
-            <linearGradient
-              id="paint0_linear_3_39"
-              x1="136.588"
-              y1="266.581"
-              x2="193.019"
-              y2="266.581"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#233B55" />
-              <stop offset="1" stop-color="#131D32" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_3_39"
-              x1="129.389"
-              y1="254.117"
-              x2="129.389"
-              y2="277.428"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#233B55" />
-              <stop offset="1" stop-color="#131D32" />
-            </linearGradient>
-            <linearGradient
-              id="paint2_linear_3_39"
-              x1="-1036.08"
-              y1="224.048"
-              x2="-979.646"
-              y2="224.048"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#F80300" />
-              <stop offset="0.033" stop-color="#F81000" />
-              <stop offset="0.158" stop-color="#F93F00" />
-              <stop offset="0.288" stop-color="#FA6800" />
-              <stop offset="0.419" stop-color="#FA8900" />
-              <stop offset="0.554" stop-color="#FBA300" />
-              <stop offset="0.693" stop-color="#FBB500" />
-              <stop offset="0.838" stop-color="#FBC000" />
-              <stop offset="1" stop-color="#FCC400" />
-            </linearGradient>
-            <linearGradient
-              id="paint3_linear_3_39"
-              x1="-1043.27"
-              y1="211.595"
-              x2="-1043.27"
-              y2="234.907"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#F80300" />
-              <stop offset="0.033" stop-color="#F81000" />
-              <stop offset="0.158" stop-color="#F93F00" />
-              <stop offset="0.288" stop-color="#FA6800" />
-              <stop offset="0.419" stop-color="#FA8900" />
-              <stop offset="0.554" stop-color="#FBA300" />
-              <stop offset="0.693" stop-color="#FBB500" />
-              <stop offset="0.838" stop-color="#FBC000" />
-              <stop offset="1" stop-color="#FCC400" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <span>NEXUS</span>
+        <img src="../imgs/app-logo.svg" alt="" />
       </div>
       <nav>
-        <a href="">Home</a>
-        <a href="">Products</a>
-        <a href="">Contact us</a>
-        <a href="">About us</a>
+        <a href="../index.html">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contact us</a>
+        <a href="#">About us</a>
       </nav>
+      <a href="../html/cart.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+          />
+        </svg>
+      </a>
     </header>
     <div class="container">
       <h3>Your Cart</h3>

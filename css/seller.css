@@ -138,12 +138,13 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding: 50px 150px;
   display: none;
+  z-index: 5000;
 }
 .add-product-form .form {
   width: 50%;
