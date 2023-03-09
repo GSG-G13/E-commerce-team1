@@ -1,7 +1,7 @@
 {
   "name": "e-commerce-team1",
   "version": "1.0.0",
-  "description": "",
+  "description": "- HTML\r - JS\r - CSS",
   "main": "index.js",
   "scripts": {
     "test": "jest"
