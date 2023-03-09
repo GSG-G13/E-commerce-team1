@@ -48,69 +48,70 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,amet!",
   },
 ];
-
-let productsFromStorge = Array.from(
-  JSON.parse(localStorage.getItem("product"))
-);
-// filteredProducts = []
-let filteredProducts = [...products, ...productsFromStorge];
-
-console.log(filteredProducts);
-
-//get elemnts from the dom
+let productsFromStorage = JSON.parse(localStorage.getItem("product"));
+let filteredProducts = [...products, ...productsFromStorage];
 const productsContainer = document.querySelector(".products");
 const searchBar = document.querySelector(".input-search");
 const productContainer = document.querySelector(".product-div");
 const list = document.getElementById("list");
-
-list.addEventListener("change", (e) => {
-  filteredProducts =
-    list.value === "All"
-      ? filteredProducts
-      : products.filter((p) => p.category === list.value);
-
-  console.log(list.value, filteredProducts);
-
-  updateDom();
+let productsDiv = document.querySelector(".products");
+if (localStorage.getItem("product")) {
+  createProductElement(filteredProducts);
+}
+let filterByLaptop = filteredProducts.filter((el) => el.category === "Laptops");
+let filterByMobile = filteredProducts.filter((el) => el.category === "Mobiles");
+let filterByHeadphones = filteredProducts.filter(
+  (el) => el.category === "Headphones"
+);
+list.addEventListener("change", () => {
+  if (list.value === "Laptops") {
+    createProductElement(filterByLaptop);
+    console.log(filterByLaptop);
+  } else if (list.value === "Mobiles") {
+    createProductElement(filterByMobile);
+  } else if (list.value === "Headphones") {
+    createProductElement(filterByHeadphones);
+  } else {
+    createProductElement(filteredProducts);
+  }
 });
+function createProductElement(products) {
+  productsDiv.innerHTML = "";
+  products.forEach((el) => {
+    let productDiv = document.createElement("div");
+    productDiv.className = "product-div";
+    let productDetailsDiv = document.createElement("div");
+    productDetailsDiv.className = "product-details";
+    productDiv.appendChild(productDetailsDiv);
+    productsDiv.appendChild(productDiv);
+    let img = document.createElement("img");
+    img.setAttribute("src", el.image);
+    productDetailsDiv.appendChild(img);
+    let productNamePrice = document.createElement("div");
+    productNamePrice.className = "product-name-price";
+    productDetailsDiv.appendChild(productNamePrice);
+    let productName = document.createElement("p");
+    productName.textContent = el.name;
+    productName.className = "product-name";
+    let productPrice = document.createElement("p");
+    productPrice.textContent = `$${el.price}`;
+    productPrice.className = "product-price";
+    productNamePrice.appendChild(productName);
+    productNamePrice.appendChild(productPrice);
+    let productCategory = document.createElement("p");
+    productCategory.className = "product-category";
+    productCategory.textContent = el.category;
+    productDetailsDiv.appendChild(productCategory);
+    let productDescription = document.createElement("p");
+    productDescription.className = "product-description";
+    productDescription.textContent = el.description;
+    productDetailsDiv.appendChild(productDescription);
+  });
+}
 
 searchBar.addEventListener("input", (e) => {
   filteredProducts = e.target.value
-    ? // ? filteredProducts.filter((p) =>
-      //     p.name.toLowerCase().includes(e.target.value.toLowerCase())
-      // )
-      filterByCategory(filteredProducts, e.target.value.toLowerCase())
+    ? filterByCategory(filteredProducts, e.target.value.toLowerCase())
     : filteredProducts;
-
-  updateDom();
+  createProductElement(filteredProducts);
 });
-
-function createProductElement(product) {
-  let ele = `
-  <div class="product-div">
-  <div class="product-details">
-    <img src="${product.image}" alt="" class="product-img" />
-    <div class="product-name-price">
-      <p class="product-name">${product.name}</p>
-      <p class="product-price">${product.price}$</p>
-    </div>
-    <p class="product-category">${product.category}</p>
-    <p class="product-description">
-      ${product.description}
-    </p>
-    <button class="add-to-cart">Add to Cart</button>
-  </div>
-</div>
-  `;
-
-  let addToCart = document.getElementsByClassName("add-to-cart");
-  console.log(addToCart.id);
-  return ele;
-}
-
-function updateDom() {
-  const plainElements = filteredProducts.map((p) => createProductElement(p));
-  productsContainer.innerHTML = plainElements;
-}
-function addToCart() {}
-updateDom();

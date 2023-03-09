@@ -39,8 +39,6 @@ function createProduct() {
     price: productPriceValue,
     category: productCategoryValue,
   };
-  products.push(product);
-  console.log(products, "jjj");
   const newArray = addProductElement(products, product);
   localStorage.setItem("product", JSON.stringify(newArray));
   createElements(products);
